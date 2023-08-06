@@ -1,0 +1,50 @@
+.blue {
+  background-color: rgb(1, 1, 27);
+  height: 25vh; /* 25% of the viewport height */
+}
+
+.lightblue {
+  background-color: rgb(255, 255, 255);
+  height: 75vh; /* 75% of the viewport height */
+}
+
+.formWrapper {
+  background-color: rgba(226, 223, 223, 0.4);
+  border-radius: 1em;
+  padding: 1em;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+  position: absolute;
+  top: 18vh;
+  left: 50%;
+  transform: translateX(-50%);
+  animation: changeBg 3s 0 1s infinite linear solid;
+}
+
+
+
+.title{
+  color: aliceblue;
+  margin-bottom: 1em;
+}
+
+.button{
+  background-color: rgb(6, 6, 83);
+}
+
+
+
+
+@media (min-width: 769px) {
+  .formWrapper {
+    width: 500px; /* For larger screens, keep the .formWrapper narrower */
+  }
+}
+
+@keyframes changeBg {
+  0%{
+    background-color: rgba(226, 223, 223, 0.4);
+  }
+  100%{
+    background-color: rgba(226, 223, 223, 0.8);
+  }
+}
