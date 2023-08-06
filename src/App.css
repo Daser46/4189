@@ -5,7 +5,7 @@
 
 .lightblue {
   background-color: rgb(255, 255, 255);
-  height: 75vh; /* 75% of the viewport height */
+  height: 70vh; /* 75% of the viewport height */
 }
 
 .formWrapper {
@@ -17,9 +17,12 @@
   top: 18vh;
   left: 50%;
   transform: translateX(-50%);
-  animation: changeBg 3s 0 1s infinite linear solid;
 }
 
+.footer{
+  height: 5vh;
+  box-shadow: 0px -2px 4px rgba(0, 0, 0, 0.9);
+}
 
 
 .title{
@@ -40,11 +43,3 @@
   }
 }
 
-@keyframes changeBg {
-  0%{
-    background-color: rgba(226, 223, 223, 0.4);
-  }
-  100%{
-    background-color: rgba(226, 223, 223, 0.8);
-  }
-}
