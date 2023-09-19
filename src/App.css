@@ -17,6 +17,8 @@
   top: 18vh;
   left: 50%;
   transform: translateX(-50%);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
 }
 
 .footer{
@@ -34,6 +36,24 @@
   background-color: rgb(6, 6, 83);
 }
 
+.drawer{
+  display: flex;
+  flex-direction: column;
+  background-color: rgb(6, 6, 83);
+  color: aliceblue;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  align-content: center;
+  width: 20vw;
+  height: 100vh;
+}
+
+.dbtn{
+  background-color: rgb(6, 6, 83);
+  border: 0px;
+  border-radius: 0px;
+}
 
 
 
