@@ -1,4 +1,5 @@
 import './App.css';
+import React,{ useState } from 'react';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
@@ -6,7 +7,7 @@ import Button from 'react-bootstrap/Button';
 import logo from './assets/logo.png';
 import Login from './Login';
 import Register from './Register';
-import React,{ useState } from 'react';
+
 
 
 const App = () => {
@@ -35,7 +36,7 @@ const App = () => {
       </div>
       <div className="d-grid gap-2">
           <Button variant="link" onClick={changePage}>
-            Sign {page ? 'in' : 'up'} Here
+            Sign {page ? 'up' : 'in'} Here
           </Button>
       </div>
     </Container>

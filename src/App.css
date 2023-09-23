@@ -37,9 +37,10 @@
 }
 
 .drawer{
+  max-height: 100vh;
   display: flex;
   flex-direction: column;
-  background-color: rgb(6, 6, 83);
+  background-color: rgba(6, 6, 83);
   color: aliceblue;
   justify-content: center;
   align-items: center;
@@ -47,6 +48,8 @@
   align-content: center;
   width: 20vw;
   height: 100vh;
+  box-shadow: 4px 0px 4px rgba(0, 0, 0, 0.6);
+  overflow-y: auto;
 }
 
 .dbtn{
@@ -55,6 +58,11 @@
   border-radius: 0px;
 }
 
+.profile{
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 2rem;
+}
 
 
 @media (min-width: 769px) {
