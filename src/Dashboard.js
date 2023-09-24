@@ -1,15 +1,18 @@
 import './App.css';
+
 import React,{ useState } from 'react';
+
 import { Button, Col, Container, Row , Image} from "react-bootstrap";
 import avatar from './assets/avatar.jpg';
+import Courses from './Courses';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-  import { faClose, faGraduationCap, faInfo, faPlug, faSignOut, faUniversity, faUsers,  } from '@fortawesome/free-solid-svg-icons'
+import { faClose, faGraduationCap, faInfo, faPlug, faSignOut, faUniversity, faUsers,  } from '@fortawesome/free-solid-svg-icons'
 
 /* For using icons refer this docs guys 
 *****************
 https://fontawesome.com/v5/docs/web/use-with/react
-https://fontawesome.com/v4/icons/ ** can't find v5 doc so i used this instead, this will do ;)
+https://fontawesome.com/v4/icons/ ** couldn't find v5 doc so i used this instead, this will do ;)
 *****************
 */
 
@@ -37,7 +40,7 @@ const options = [
     },
     
 ];
-
+//https://github.com/hiruniluminda/test1/tree/master
 const DBtn = ({ icon, name, isActive, onClick }) => (
     <Button className={`dbtn btn btn-primary ${isActive ? 'active' : ''}`} onClick={onClick}>
         <FontAwesomeIcon icon={icon} />&nbsp;&nbsp;&nbsp;{name}
@@ -84,7 +87,7 @@ const Dashboard = () => {
                     </Row>
                 </Col>
                 <Col fluid id="renderScreen">
-
+                        <Courses/>
                 </Col>
             </Row>
         </Container>

@@ -50,8 +50,12 @@
   height: 100vh;
   box-shadow: 4px 0px 4px rgba(0, 0, 0, 0.6);
   overflow-y: auto;
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
 }
-
+.drawer::-webkit-scrollbar {
+  display: none;
+}
 .dbtn{
   background-color: rgb(6, 6, 83);
   border: 0px;
