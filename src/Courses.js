@@ -19,7 +19,7 @@ const courses = [
         level: 'beginner',
         duration: '4weeks',
         image: courseimg,
-        ratings: 5,
+        ratings: 4.5,
     },
     {
         id: 3,
@@ -27,10 +27,90 @@ const courses = [
         level: 'Intermediate',
         duration: '4weeks',
         image: courseimg,
-        ratings: 5,
+        ratings: 3.2,
     },
     {
         id: 4,
+        name: 'Introduction to JAVA',
+        level: 'beginner',
+        duration: '4weeks',
+        image: courseimg,
+        ratings: 5,
+    },
+    {
+        id: 5,
+        name: 'Introduction to JAVA',
+        level: 'beginner',
+        duration: '4weeks',
+        image: courseimg,
+        ratings: 5,
+    },
+    {
+        id: 6,
+        name: 'Introduction to JAVA',
+        level: 'beginner',
+        duration: '4weeks',
+        image: courseimg,
+        ratings: 5,
+    },
+    {
+        id: 7,
+        name: 'Introduction to JAVA',
+        level: 'beginner',
+        duration: '4weeks',
+        image: courseimg,
+        ratings: 5,
+    },
+    {
+        id: 8,
+        name: 'Introduction to JAVA',
+        level: 'beginner',
+        duration: '4weeks',
+        image: courseimg,
+        ratings: 5,
+    },
+    {
+        id: 9,
+        name: 'Introduction to JAVA',
+        level: 'beginner',
+        duration: '4weeks',
+        image: courseimg,
+        ratings: 5,
+    },
+    {
+        id: 10,
+        name: 'Introduction to JAVA',
+        level: 'beginner',
+        duration: '4weeks',
+        image: courseimg,
+        ratings: 5,
+    },
+    {
+        id: 11,
+        name: 'Introduction to JAVA',
+        level: 'beginner',
+        duration: '4weeks',
+        image: courseimg,
+        ratings: 5,
+    },
+    {
+        id: 12,
+        name: 'Introduction to JAVA',
+        level: 'beginner',
+        duration: '4weeks',
+        image: courseimg,
+        ratings: 5,
+    },
+    {
+        id: 13,
+        name: 'Introduction to JAVA',
+        level: 'beginner',
+        duration: '4weeks',
+        image: courseimg,
+        ratings: 5,
+    },
+    {
+        id: 14,
         name: 'Introduction to JAVA',
         level: 'beginner',
         duration: '4weeks',
@@ -41,22 +121,25 @@ const courses = [
 
 const Courses = () => {
     return(
-        <Container xs={12} fluid className="d-flex flex-coumn">
-        <Col xs={10}>
+        <Container xs={12} fluid className="d-flex flex-coumn h-100"  >
+        <Col xs={10} className="d-flex flex-column">
             <Row>
-                <Container className="text-center"><h2>Recomended courses</h2></Container>
-                {courses.map(course => (
-                    <CourseView
-                    image={course.image}
-                    name={course.name}
-                    duration={course.duration}
-                    level={course.level}
-                    rating={course.ratings}
-                    />
-                ))}
+                <Container><p style={{fontSize:"20px",textTransform:'uppercase', paddingTop: 20}}>Recomended courses</p></Container>
+                <Row className="gap-2 scroll-bar-hidden" style={{overflowX:"auto", overflowY: 'hidden', flexDirection: 'column',whiteSpace: 'nowrap', maxHeight: '400px'}}>
+                    {courses.map(course => (
+                        <CourseView
+                        image={course.image}
+                        name={course.name}
+                        duration={course.duration}
+                        level={course.level}
+                        rating={course.ratings}
+                        />
+                    ))}
+                </Row>
             </Row>
-            <Row>
-                <Container className="text-center"><h2>Other Courses</h2></Container>
+            <Row className="d-flex flex-column flex-grow-1"> 
+                <Container><p style={{fontSize:"20px",textTransform:'uppercase'}}>other courses</p></Container>
+                <Row className="gap-2 scroll-bar-hidden" style={{overflowY:'scroll' ,whiteSpace: 'nowrap', maxHeight: 'calc(100vh - 450px)'}}>
                 {courses.map(course => (
                     <CourseView
                     image={course.image}
@@ -66,10 +149,11 @@ const Courses = () => {
                     rating={course.ratings}
                     />
                 ))}
+                </Row>
             </Row>
         </Col>
         <Col>
-        notifications
+            notifications
         </Col>
         </Container>
     );

@@ -40,7 +40,7 @@
   max-height: 100vh;
   display: flex;
   flex-direction: column;
-  background-color: rgba(6, 6, 83);
+  background-color: rgb(1, 1, 27);
   color: aliceblue;
   justify-content: center;
   align-items: center;
@@ -52,12 +52,13 @@
   overflow-y: auto;
   -ms-overflow-style: none;  /* IE and Edge */
   scrollbar-width: none;  /* Firefox */
+  z-index: 1000000;
 }
 .drawer::-webkit-scrollbar {
   display: none;
 }
 .dbtn{
-  background-color: rgb(6, 6, 83);
+  background-color: rgb(1, 1, 27);
   border: 0px;
   border-radius: 0px;
 }

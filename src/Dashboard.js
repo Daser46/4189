@@ -16,7 +16,6 @@ https://fontawesome.com/v4/icons/ ** couldn't find v5 doc so i used this instead
 *****************
 */
 
-
 const options = [
     {
         id: 0,
@@ -40,7 +39,6 @@ const options = [
     },
     
 ];
-//https://github.com/hiruniluminda/test1/tree/master
 const DBtn = ({ icon, name, isActive, onClick }) => (
     <Button className={`dbtn btn btn-primary ${isActive ? 'active' : ''}`} onClick={onClick}>
         <FontAwesomeIcon icon={icon} />&nbsp;&nbsp;&nbsp;{name}
@@ -86,7 +84,7 @@ const Dashboard = () => {
                         <Col style={{ textAlign: 'center', color: 'white', padding: '5px'}}> © Golden Pro, Inc. All rights reserved.</Col>
                     </Row>
                 </Col>
-                <Col fluid id="renderScreen">
+                <Col fluid id="renderScreen" >
                         <Courses/>
                 </Col>
             </Row>
