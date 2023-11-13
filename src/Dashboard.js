@@ -8,6 +8,7 @@ import Courses from './Courses';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faClose, faGraduationCap, faInfo, faPlug, faSignOut, faUniversity, faUsers,  } from '@fortawesome/free-solid-svg-icons'
+import CourseModule from './CourseModule';
 
 /* For using icons refer this docs guys 
 *****************
@@ -39,6 +40,23 @@ const options = [
     },
     
 ];
+
+function swithTab(activeButtonId){
+    switch (activeButtonId) {
+        case 0:
+            return <Courses/>;
+        case 1:
+             return <CourseModule/>;
+        // case 2:
+        //     return <Community key={option.id} />;
+        // case 3:
+        //     return <Settings key={option.id} />;
+        default:
+            return <Courses/>;
+    }
+}
+
+
 const DBtn = ({ icon, name, isActive, onClick }) => (
     <Button className={`dbtn btn btn-primary ${isActive ? 'active' : ''}`} onClick={onClick}>
         <FontAwesomeIcon icon={icon} />&nbsp;&nbsp;&nbsp;{name}
@@ -51,6 +69,7 @@ const Dashboard = () => {
 
     const handleButtonClick = (id) => {
         setActiveButtonId(id);
+
     }
     return(
         <Container fluid>
@@ -85,7 +104,8 @@ const Dashboard = () => {
                     </Row>
                 </Col>
                 <Col fluid id="renderScreen" >
-                        <Courses/>
+                    {swithTab(activeButtonId)}
+                    
                 </Col>
             </Row>
         </Container>

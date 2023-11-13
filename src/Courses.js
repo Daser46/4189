@@ -2,7 +2,18 @@ import React, {useState} from "react";
 import './Courses.css';
 import CourseView from "./CourseView";
 import  courseimg from './assets/courseimg.jpg';
-import { Col, Container, Row } from "react-bootstrap";
+import Notifications from "./Notifications";
+import {Col, Container, Row } from "react-bootstrap";
+import ButtonGroup from 'react-bootstrap/ButtonGroup';
+import ToggleButton from 'react-bootstrap/ToggleButton';
+
+
+
+const radios = [
+    { name: '1', value: '1' },
+    { name: '2', value: '2' },
+    { name: '3', value: '3' },
+  ];
 
 const courses = [
     {
@@ -120,12 +131,13 @@ const courses = [
 ];
 
 const Courses = () => {
+    const [radioValue, setRadioValue] = useState('1');
     return(
         <Container xs={12} fluid className="d-flex flex-coumn h-100"  >
-        <Col xs={10} className="d-flex flex-column">
+        <Col xs={9} className="d-flex flex-column">
             <Row>
                 <Container><p style={{fontSize:"20px",textTransform:'uppercase', paddingTop: 20}}>Recomended courses</p></Container>
-                <Row className="gap-2 scroll-bar-hidden" style={{overflowX:"auto", overflowY: 'hidden', flexDirection: 'column',whiteSpace: 'nowrap', maxHeight: '400px'}}>
+                <Row className="gap-2 scroll-bar-hidden" style={{overflowX:"auto", overflowY: 'hidden', flexDirection: 'column',whiteSpace: 'nowrap', maxHeight: '300px'}}>
                     {courses.map(course => (
                         <CourseView
                         image={course.image}
@@ -150,10 +162,25 @@ const Courses = () => {
                     />
                 ))}
                 </Row>
+                <ButtonGroup style={{paddingTop: '1em', width: '100%', maxWidth: '150px', justifySelf: 'center'}}>
+                {radios.map((radio, idx) => (
+                    <ToggleButton
+                        key={idx}
+                        id={`radio-${idx}`}
+                        type="radio"
+                        name="radio"
+                        value={radio.value}
+                        checked={radioValue === radio.value}
+                        onChange={(e) => setRadioValue(e.currentTarget.value)}
+                        >
+                            {radio.name}
+                    </ToggleButton>
+                    ))}
+                </ButtonGroup>
             </Row>
         </Col>
-        <Col>
-            notifications
+        <Col fluid className="d-flex justify-content-center p-2">
+            <Notifications/>
         </Col>
         </Container>
     );

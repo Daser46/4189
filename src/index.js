@@ -5,6 +5,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import Dashboard from './Dashboard';
+import CourseModule from './CourseModule';
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
