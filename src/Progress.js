@@ -3,11 +3,12 @@ import { Row, Col, Button } from "react-bootstrap";
 import Table from 'react-bootstrap/Table';
 import ProgressBar from 'react-bootstrap/ProgressBar';
 import Container from 'react-bootstrap/Container';
-
-
-const progress = 60;
-
-const Progress = () => {
+/** 
+  *@author github.com/daser46
+  course module -> progress compnent
+*/
+const Progress = ({userID}) => {
+    const progress = 60;
     return(
         <>
             <Container fluid style={{border: '1px solid rgb(200,200,200)', borderRadius: '10px', overflow: 'hidden', boxShadow: '1px 1px 4px rgba(0,0,0, 0.4)', marginBottom: '10px'}}>
@@ -66,5 +67,4 @@ const Progress = () => {
         </>
     );
 }
-
 export default Progress;

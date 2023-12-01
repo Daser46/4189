@@ -3,7 +3,10 @@ import { Button, Col, Row } from 'react-bootstrap';
 import Card from 'react-bootstrap/Card';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faClock, faStar,faStarOfDavid } from '@fortawesome/free-solid-svg-icons';
-
+/** 
+  *@author github.com/daser46
+  course card sfc
+*/
 const ratingArray = (rating) => {
     const roundedRating = Math.round(rating);
     const componentsArray = Array.from({ length: roundedRating }, (_, index) => index);
@@ -16,7 +19,7 @@ const emptyArray = (rating) => {
     return componentsArray;
   };
 
-const CourseView = ({image,name,duration,level,rating}) => {
+const CourseView = ({image,name,duration,level,rating,onClick}) => {
     return(
         <Card style={{display:'flex', flexDirection: 'column', overflow: 'hidden' ,width:'12rem', padding: '0px', boxShadow: '2px 2px 4px rgba(0,0,0,0.4)'}}>
             <Card.Img src={image} variant='top'/>
@@ -31,7 +34,7 @@ const CourseView = ({image,name,duration,level,rating}) => {
             </Row> 
             <Row className='text-center'>
                 <Card.Text >Rating :  <span style={{color:'orange'}}>{ratingArray(rating).map(e=><FontAwesomeIcon icon={faStar}/>)}</span>{emptyArray(rating).map(e=><FontAwesomeIcon icon={faStarOfDavid}/>)} {rating}</Card.Text> 
-                <Button style={{margin:0}}>View</Button> 
+                <Button style={{margin:0}} onClick={onClick}>View</Button> 
             </Row>
         </Card>
     );

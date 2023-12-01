@@ -10,7 +10,7 @@ const Notification = ({message, date}) => {
                 </Row>
                 <Row>
                     <Card.Text  style={{fontSize: '10px', display: 'flex'}}>{date}</Card.Text>
-                </Row>
+</Row>
                 
             </Card>
         </Container>

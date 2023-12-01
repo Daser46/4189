@@ -7,10 +7,12 @@ import Button from 'react-bootstrap/Button';
 import logo from './assets/logo.png';
 import Login from './Login';
 import Register from './Register';
+/** 
+  *@author github.com/daser46
+  login and register with fire base
+*/
 
-
-
-const App = () => {
+const App = ({setUserData}) => {
   var [page, setPage] = useState(true);
   const changePage = () => {
     setPage((prevState) => !prevState);
@@ -32,7 +34,7 @@ const App = () => {
     </Row>
     <Container className='formWrapper'>
       <div>
-        {page ? <Login /> : <Register />}
+        {page ? <Login setUserData={setUserData} /> : <Register />}
       </div>
       <div className="d-grid gap-2">
           <Button variant="link" onClick={changePage}>
